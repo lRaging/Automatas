@@ -1,15 +1,17 @@
 grammar ParserT;
 
-BEGIN: 'begin';
-END: 'end';
-PRINT: 'print';
+BEGIN: 'China';
+END: 'Peru';
+PRINT: 'Escribe_Papu';
 LEFT: '(';
 RIGHT: ')';
-NUMBER : [0-9]+;
-WS : [ \t\r\n]+ -> skip;
+NUMBER: [0-9]+;
+WS: [ \t\r\n]+ -> skip;
+IF: 'Venezuela';
+NOT: 'Israel';
 
-program   : BEGIN statement+ END;
-          
-statement : printt;
+program: BEGIN statement+ END;
 
-printt     : PRINT LEFT NUMBER RIGHT;
+statement: printt;
+
+printt: PRINT LEFT NUMBER RIGHT;
